@@ -1,0 +1,70 @@
+{{>head}}
+
+<body>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        .container {
+            max-width: 960px;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        {{>aside}}
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+
+                
+            </nav>
+
+            <div class="container " id="contenido">
+                <h1 class="mt-4">Catalogo de VideoJuegos</h1>
+                <div class="row">
+                    <div class="col-md-7 col-lg-8">
+                        <h4 class="mb-3">Añadir un nuevo Estudio</h4>
+                        <form class="needs-validation" novalidate="" method="post" action="/addstudio">
+                            <div class="row g-3">
+
+                                <div class="col-12">
+                                    <label for="username" class="form-label">Nombre del estudio</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">@</span>
+                                        <input name="nombreestudio" type="text" class="form-control" id="username" placeholder="Nombre"
+                                            required="">
+                                        <div class="invalid-feedback">
+                                            El nombre es requerido de forma correcta.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <button class="w-100 btn btn-primary btn-lg mb-5" type="submit">Agregar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+        </div>
+    </div>
+    <script src="js/validacion.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+
+</html>
